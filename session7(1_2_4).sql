@@ -53,3 +53,6 @@ JOIN Customers c ON o.CustomerID = c.CustomerID;
 update orders
 set TotalAmount = 250.00
 where OrderID = 1;
+
+-- Tạo chỉ số cho cột OrderID trong bảng OrderDetails
+create index idx_OrderID on OrderDetails(OrderID);
